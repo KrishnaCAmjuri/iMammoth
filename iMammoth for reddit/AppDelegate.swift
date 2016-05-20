@@ -20,10 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        
-        print("url: \(url)")
-        
-        return true
+        if url.scheme == "iMammoth-for-reddit" {
+            print("url: \(url)")
+            if let query = url.query {
+                let queryParameters: NSArray = query.componentsSeparatedByString("&")
+                let codeParameters: NSArray = queryParameters.filteredArrayUsingPredicate(NSPredicate(format: "SELF BEGINSWITH %@", "code="))
+                if let codeQuery: String = codeParameters.objectAtIndex(0) as? String {
+                    let code = codeQuery.stringByReplacingOccurrencesOfString("code=", withString: "")
+                    print("code = \(code)")
+                }
+            }
+            return true
+        }
+        return false
     }
     
     func applicationWillResignActive(application: UIApplication) {
