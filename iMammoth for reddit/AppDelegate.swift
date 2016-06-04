@@ -19,8 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        if url.scheme == "iMammoth-for-reddit" {
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
+    {
+        if url.scheme == "imammoth-for-reddit" {
             print("url: \(url)")
             if let query = url.query {
                 let queryParameters: NSArray = query.componentsSeparatedByString("&")
