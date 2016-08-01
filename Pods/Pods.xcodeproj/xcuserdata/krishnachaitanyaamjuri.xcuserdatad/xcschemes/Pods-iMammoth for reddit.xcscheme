@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6334FE7712C6AB7F73C5BBF8'
+               BlueprintIdentifier = '191BED9B3422E62DF9B7FBBC'
                BlueprintName = 'Pods-iMammoth for reddit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_iMammoth_for_reddit.framework'>

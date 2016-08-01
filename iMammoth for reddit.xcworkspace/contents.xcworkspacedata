@@ -4,46 +4,6 @@
    <FileRef
       location = "group:iMammoth for reddit.xcodeproj">
    </FileRef>
-   <Group
-      location = "group:FirstTouchFramework.framework"
-      name = "FirstTouchFramework.framework">
-      <FileRef
-         location = "group:FirstTouchFramework">
-      </FileRef>
-      <Group
-         location = "group:Headers"
-         name = "Headers">
-         <FileRef
-            location = "group:CircularSlider.swift">
-         </FileRef>
-         <FileRef
-            location = "group:FirstTouchFramework-Swift.h">
-         </FileRef>
-         <FileRef
-            location = "group:FirstTouchFramework.h">
-         </FileRef>
-      </Group>
-      <FileRef
-         location = "group:Info.plist">
-      </FileRef>
-      <Group
-         location = "group:Modules"
-         name = "Modules">
-         <Group
-            location = "group:FirstTouchFramework.swiftmodule"
-            name = "FirstTouchFramework.swiftmodule">
-            <FileRef
-               location = "group:x86_64.swiftdoc">
-            </FileRef>
-            <FileRef
-               location = "group:x86_64.swiftmodule">
-            </FileRef>
-         </Group>
-         <FileRef
-            location = "group:module.modulemap">
-         </FileRef>
-      </Group>
-   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
