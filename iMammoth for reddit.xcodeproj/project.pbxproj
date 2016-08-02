@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		641082B0C489DB32D89C178B /* Pods_iMammoth_for_reddit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA62E0CA365D7D2627607060 /* Pods_iMammoth_for_reddit.framework */; };
+		6754B5741D4F236400F2069E /* SideNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6754B5731D4F236400F2069E /* SideNavigationController.swift */; };
 		6754B5761D4F58CA00F2069E /* MMTUserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6754B5751D4F58CA00F2069E /* MMTUserAPIManager.swift */; };
 		6768CE0F1CF1BF890046700A /* MMTClientAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768CE0E1CF1BF890046700A /* MMTClientAPIManager.swift */; };
 		6768CE111CF1C0180046700A /* MMTPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768CE101CF1C0180046700A /* MMTPathGenerator.swift */; };

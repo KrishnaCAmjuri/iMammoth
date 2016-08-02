@@ -9,13 +9,13 @@
 import UIKit
 import Alamofire
 
-class iMApiManager: NSObject {
+class MMTClientAPIManager: NSObject {
     
     override init() {
         super.init()
     }
     
-    func generateClientOnlyAccessToken() -> String {
+    class func generateClientOnlyAccessToken() -> String {
 
         let device_id = UIDevice.currentDevice().identifierForVendor!.UUIDString
         let parameters = ["grant_type":"https://oauth.reddit.com/grants/installed_client", "device_id":device_id]

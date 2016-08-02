@@ -13,8 +13,8 @@ let BASE_URL = "https://www.reddit.com/api/v1"
 class MMTPathGenerator: NSObject {
     
     class func generateOfflineAccessTokenPath() -> String {
+     
         return BASE_URL + "/access_token"
     }
-    
     
 }

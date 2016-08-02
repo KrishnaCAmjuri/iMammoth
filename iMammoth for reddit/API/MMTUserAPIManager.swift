@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MMTUserAPIManager: NSURLSession {
+class MMTUserAPIManager: NSObject {
 
     override init() {
         super.init()

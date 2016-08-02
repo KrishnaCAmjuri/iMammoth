@@ -13,14 +13,28 @@ class ViewController: UIViewController, UIWebViewDelegate {
     
     let authorizationUrlString = "https://www.reddit.com/api/v1/authorize.compact?client_id=FhboqVZdAcqDQA&response_type=code&state=fuckyou&redirect_uri=iMammoth-for-reddit://response&duration=permanent&scope=identity,edit,flair,history,modconfig,modflair,modlog,modposts,modwiki,mysubreddits,privatemessages,read,report,save,submit,subscribe,vote,wikiedit,wikiread"
     
+    let implicitGrantFlowAuthString = "https://www.reddit.com/api/v1/authorize.compact?client_id=FhboqVZdAcqDQA&response_type=token&state=fuckyou&redirect_uri=iMammoth-for-reddit://response&scope=identity edit flair history modconfig modflair modlog modposts modwiki mysubreddits privatemessages read report save submit subscribe vote wikiedit wikiread"
+    
+    func replaceSpaceByEncoding(string : String) -> String {
+        if let returnS = string.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+            return returnS
+        }
+        return ""
+    }
+    
     func loginPressed(sender: AnyObject) {
-        let url: NSURL = NSURL(string: authorizationUrlString)!
-        let request: NSURLRequest = NSURLRequest(URL: url)
         
-        webView.delegate = self
-        webView.loadRequest(request)
-        webView.hidden = false
-        login.hidden = true        
+        MMTClientAPIManager.generateClientOnlyAccessToken()
+        
+//        if let url: NSURL = NSURL(string: replaceSpaceByEncoding(implicitGrantFlowAuthString)) {
+//            let request: NSURLRequest = NSURLRequest(URL: url)
+//            
+//            webView.delegate = self
+//            webView.loadRequest(request)
+//            webView.hidden = false
+//            login.hidden = true
+//        }
+        
     }
     
     func webViewDidStartLoad(webView: UIWebView) {
