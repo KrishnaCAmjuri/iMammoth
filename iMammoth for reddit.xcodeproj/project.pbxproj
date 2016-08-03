@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		641082B0C489DB32D89C178B /* Pods_iMammoth_for_reddit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA62E0CA365D7D2627607060 /* Pods_iMammoth_for_reddit.framework */; };
+		6750B8751D50EE4D00A16DBA /* AppOnlyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750B8741D50EE4D00A16DBA /* AppOnlyToken.swift */; };
+		6750B8781D50FEB800A16DBA /* MMBaseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750B8771D50FEB800A16DBA /* MMBaseSession.swift */; };
+		6750B87A1D51036700A16DBA /* MMWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750B8791D51036700A16DBA /* MMWebViewController.swift */; };
 		6754B5741D4F236400F2069E /* SideNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6754B5731D4F236400F2069E /* SideNavigationController.swift */; };
 		6754B5761D4F58CA00F2069E /* MMTUserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6754B5751D4F58CA00F2069E /* MMTUserAPIManager.swift */; };
 		6768CE0F1CF1BF890046700A /* MMTClientAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768CE0E1CF1BF890046700A /* MMTClientAPIManager.swift */; };
@@ -17,10 +19,14 @@
 		67E093391CEB910200739046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E093371CEB910200739046 /* Main.storyboard */; };
 		67E0933B1CEB910200739046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E0933A1CEB910200739046 /* Assets.xcassets */; };
 		67E0933E1CEB910200739046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E0933C1CEB910200739046 /* LaunchScreen.storyboard */; };
+		7407D43B1F630340C6B751B1 /* Pods_iMammoth_for_reddit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86817ECEDD6EE67FC6A72104 /* Pods_iMammoth_for_reddit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		007364FD8BAF9D357BFC3673 /* Pods-iMammoth for reddit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMammoth for reddit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMammoth for reddit/Pods-iMammoth for reddit.debug.xcconfig"; sourceTree = "<group>"; };
+		123E4BBED2E4AC2AC1904EA6 /* Pods-iMammoth for reddit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMammoth for reddit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMammoth for reddit/Pods-iMammoth for reddit.debug.xcconfig"; sourceTree = "<group>"; };
+		6750B8741D50EE4D00A16DBA /* AppOnlyToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOnlyToken.swift; sourceTree = "<group>"; };
+		6750B8771D50FEB800A16DBA /* MMBaseSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBaseSession.swift; sourceTree = "<group>"; };
+		6750B8791D51036700A16DBA /* MMWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMWebViewController.swift; sourceTree = "<group>"; };
 		6754B5731D4F236400F2069E /* SideNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideNavigationController.swift; sourceTree = "<group>"; };
 		6754B5751D4F58CA00F2069E /* MMTUserAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTUserAPIManager.swift; sourceTree = "<group>"; };
 		6768CE0E1CF1BF890046700A /* MMTClientAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTClientAPIManager.swift; sourceTree = "<group>"; };
@@ -32,8 +38,8 @@
 		67E0933A1CEB910200739046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67E0933D1CEB910200739046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67E0933F1CEB910200739046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA62E0CA365D7D2627607060 /* Pods_iMammoth_for_reddit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMammoth_for_reddit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8BCF346CEAD6C12AB58BFB3 /* Pods-iMammoth for reddit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMammoth for reddit.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMammoth for reddit/Pods-iMammoth for reddit.release.xcconfig"; sourceTree = "<group>"; };
+		86817ECEDD6EE67FC6A72104 /* Pods_iMammoth_for_reddit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMammoth_for_reddit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C7B3AC9F817DB203F484BC6 /* Pods-iMammoth for reddit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMammoth for reddit.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMammoth for reddit/Pods-iMammoth for reddit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,20 +47,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				641082B0C489DB32D89C178B /* Pods_iMammoth_for_reddit.framework in Frameworks */,
+				7407D43B1F630340C6B751B1 /* Pods_iMammoth_for_reddit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08092A85585243C17C528CF7 /* Pods */ = {
+		12551C26B4214976EC62B016 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				007364FD8BAF9D357BFC3673 /* Pods-iMammoth for reddit.debug.xcconfig */,
-				F8BCF346CEAD6C12AB58BFB3 /* Pods-iMammoth for reddit.release.xcconfig */,
+				86817ECEDD6EE67FC6A72104 /* Pods_iMammoth_for_reddit.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6750B8731D50ED6C00A16DBA /* Model Objects */ = {
+			isa = PBXGroup;
+			children = (
+				6750B8741D50EE4D00A16DBA /* AppOnlyToken.swift */,
+			);
+			name = "Model Objects";
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6750B8761D50FCFF00A16DBA /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6750B8771D50FEB800A16DBA /* MMBaseSession.swift */,
+			);
+			path = "Network Manager";
 			sourceTree = "<group>";
 		};
 		6754B5721D4F234A00F2069E /* Navigation Controller */ = {
@@ -87,8 +109,8 @@
 			children = (
 				67E093321CEB910200739046 /* iMammoth for reddit */,
 				67E093311CEB910200739046 /* Products */,
-				08092A85585243C17C528CF7 /* Pods */,
-				7310F04436A1080C2841F3E1 /* Frameworks */,
+				C9E798E11BABC7802CA5922D /* Pods */,
+				12551C26B4214976EC62B016 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +127,10 @@
 			children = (
 				67E093331CEB910200739046 /* AppDelegate.swift */,
 				67E093351CEB910200739046 /* ViewController.swift */,
+				6750B8791D51036700A16DBA /* MMWebViewController.swift */,
 				6754B5721D4F234A00F2069E /* Navigation Controller */,
+				6750B8731D50ED6C00A16DBA /* Model Objects */,
+				6750B8761D50FCFF00A16DBA /* Network Manager */,
 				6768CE0D1CF1BE580046700A /* API */,
 				6768CE121CF1CBFA0046700A /* Miscellaneous */,
 				67E093371CEB910200739046 /* Main.storyboard */,
@@ -116,12 +141,13 @@
 			path = "iMammoth for reddit";
 			sourceTree = "<group>";
 		};
-		7310F04436A1080C2841F3E1 /* Frameworks */ = {
+		C9E798E11BABC7802CA5922D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BA62E0CA365D7D2627607060 /* Pods_iMammoth_for_reddit.framework */,
+				123E4BBED2E4AC2AC1904EA6 /* Pods-iMammoth for reddit.debug.xcconfig */,
+				9C7B3AC9F817DB203F484BC6 /* Pods-iMammoth for reddit.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,12 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67E093421CEB910200739046 /* Build configuration list for PBXNativeTarget "iMammoth for reddit" */;
 			buildPhases = (
-				0DD114A8CF99B51B939BF9F6 /* Check Pods Manifest.lock */,
+				B70D8AA6786EDACDE4B3EFFF /* [CP] Check Pods Manifest.lock */,
 				67E0932C1CEB910200739046 /* Sources */,
 				67E0932D1CEB910200739046 /* Frameworks */,
 				67E0932E1CEB910200739046 /* Resources */,
-				1E0D638E6B8FEB8C7B15FB0A /* Embed Pods Frameworks */,
-				62B86FD3CBD8369BBB51788E /* Copy Pods Resources */,
+				6CE5A2E49FD49517AEB2B997 /* [CP] Embed Pods Frameworks */,
+				C1130DF35CEF8BB2F7EC3714 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,29 +221,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DD114A8CF99B51B939BF9F6 /* Check Pods Manifest.lock */ = {
+		6CE5A2E49FD49517AEB2B997 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		1E0D638E6B8FEB8C7B15FB0A /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,14 +236,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMammoth for reddit/Pods-iMammoth for reddit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		62B86FD3CBD8369BBB51788E /* Copy Pods Resources */ = {
+		B70D8AA6786EDACDE4B3EFFF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C1130DF35CEF8BB2F7EC3714 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,9 +276,12 @@
 				6768CE0F1CF1BF890046700A /* MMTClientAPIManager.swift in Sources */,
 				67E093361CEB910200739046 /* ViewController.swift in Sources */,
 				6754B5761D4F58CA00F2069E /* MMTUserAPIManager.swift in Sources */,
+				6750B87A1D51036700A16DBA /* MMWebViewController.swift in Sources */,
 				6754B5741D4F236400F2069E /* SideNavigationController.swift in Sources */,
+				6750B8751D50EE4D00A16DBA /* AppOnlyToken.swift in Sources */,
 				6768CE111CF1C0180046700A /* MMTPathGenerator.swift in Sources */,
 				67E093341CEB910200739046 /* AppDelegate.swift in Sources */,
+				6750B8781D50FEB800A16DBA /* MMBaseSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +392,7 @@
 		};
 		67E093431CEB910200739046 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 007364FD8BAF9D357BFC3673 /* Pods-iMammoth for reddit.debug.xcconfig */;
+			baseConfigurationReference = 123E4BBED2E4AC2AC1904EA6 /* Pods-iMammoth for reddit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -380,7 +409,7 @@
 		};
 		67E093441CEB910200739046 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8BCF346CEAD6C12AB58BFB3 /* Pods-iMammoth for reddit.release.xcconfig */;
+			baseConfigurationReference = 9C7B3AC9F817DB203F484BC6 /* Pods-iMammoth for reddit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

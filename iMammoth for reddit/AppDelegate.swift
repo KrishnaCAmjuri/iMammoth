@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Keychain
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,13 +24,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
     {
         if url.scheme == "imammoth-for-reddit" {
-            print("url: \(url)")
-            if let query = url.query {
-                let queryParameters: NSArray = query.componentsSeparatedByString("&")
-                let codeParameters: NSArray = queryParameters.filteredArrayUsingPredicate(NSPredicate(format: "SELF BEGINSWITH %@", "code="))
+            if let urlstring = url.relativeString {
+                let nonQueryString = "imammoth-for-reddit://response#"
+                let queryString = urlstring.substringFromIndex(urlstring.startIndex.advancedBy(nonQueryString.characters.count))
+                let queryParameters: NSArray = queryString.componentsSeparatedByString("&")
+                let codeParameters: NSArray = queryParameters.filteredArrayUsingPredicate(NSPredicate(format: "SELF BEGINSWITH %@", "access_token="))
                 if let codeQuery: String = codeParameters.objectAtIndex(0) as? String {
-                    let code = codeQuery.stringByReplacingOccurrencesOfString("code=", withString: "")
-                    print("code = \(code)")
+                    let code = codeQuery.stringByReplacingOccurrencesOfString("access_token=", withString: "")
+                    print("access_token = \(code)")
+                    if Keychain.save(code, forKey: "access_token") {
+                        
+                    }
                 }
             }
             return true

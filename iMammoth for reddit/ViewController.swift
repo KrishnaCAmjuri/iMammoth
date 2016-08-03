@@ -24,16 +24,18 @@ class ViewController: UIViewController, UIWebViewDelegate {
     
     func loginPressed(sender: AnyObject) {
         
-        MMTClientAPIManager.generateClientOnlyAccessToken()
-        
-//        if let url: NSURL = NSURL(string: replaceSpaceByEncoding(implicitGrantFlowAuthString)) {
-//            let request: NSURLRequest = NSURLRequest(URL: url)
-//            
+        if let url: NSURL = NSURL(string: replaceSpaceByEncoding(implicitGrantFlowAuthString)) {
+            let request: NSURLRequest = NSURLRequest(URL: url)
+            let wkVC: MMWebViewController = MMWebViewController(request: request)
+            let nav: UINavigationController = UINavigationController(rootViewController: wkVC)
+            self.presentViewController(nav, animated: true, completion: nil)
 //            webView.delegate = self
 //            webView.loadRequest(request)
 //            webView.hidden = false
 //            login.hidden = true
-//        }
+        }
+//
+//        MMTClientAPIManager.generateClientOnlyAccessToken()
         
     }
     
