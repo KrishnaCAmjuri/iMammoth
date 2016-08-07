@@ -8,13 +8,58 @@
 
 import UIKit
 
-let BASE_URL = "https://www.reddit.com/api/v1"
+var MM_CURRENT_STATE = "" // will get changed
 
 class MMTPathGenerator: NSObject {
     
+    static let BASE_TOKEN_URL = "https://www.reddit.com/api/v1"
+    static let BASE_SERVER_URL = "https://oauth.reddit.com"
+    
+    //MARK: - TOKEN PATHS
+    
     class func generateOfflineAccessTokenPath() -> String {
      
-        return BASE_URL + "/access_token"
+        return BASE_TOKEN_URL + "/access_token"
     }
     
+    class func generateRefreshAccessTokenPath() -> String {
+        
+        return BASE_TOKEN_URL + "/access_token"
+    }
+    
+    class func generateRevokeTokenPath() -> String {
+        
+        return BASE_TOKEN_URL + "/revoke_token"
+    }
+    
+    class func generateImplicitGrantAuthorizationPath() -> String {
+        
+        let gigaPath:String = BASE_TOKEN_URL + "/authorize.compact?client_id=FhboqVZdAcqDQA&response_type=token&state=fuckyou&redirect_uri=iMammoth-for-reddit://response&scope=identity edit flair history modconfig modflair modlog modposts modwiki mysubreddits privatemessages read report save submit subscribe vote wikiedit wikiread"
+        
+        return gigaPath.getURLreadyString()
+    }
+    
+    class func generateAuthorizationPath(scopes: [String]) -> String {
+        
+        var scopeString: String = "&scope="
+        scopeString.appendContentsOf("\(scopes[0])")
+        for i in 1...(scopes.count-1) {
+            scopeString.appendContentsOf(",\(scopes[i])")
+        }
+        
+        MM_CURRENT_STATE = String.getRandomAlphaNumericString(9)
+        
+        var path: String = BASE_TOKEN_URL + "/authorize.compact?client_id=\(MMConstants.clientID)&response_type=code&state=\(MM_CURRENT_STATE)&redirect_uri=\(MMConstants.redirectURI)&duration=permanent"
+        path.appendContentsOf(scopeString)
+        
+        return path
+    }
+    
+    //MARK: - ACCOUNT PATHS
+    
+    class func generateAccountAccessPath() -> String {
+        
+        var path = ""
+        return path
+    }
 }

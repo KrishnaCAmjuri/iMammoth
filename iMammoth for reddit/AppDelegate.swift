@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Keychain
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,27 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-
+        
         return true
     }
 
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool
     {
-        if url.scheme == "imammoth-for-reddit" {
-            if let urlstring = url.relativeString {
-                let nonQueryString = "imammoth-for-reddit://response#"
-                let queryString = urlstring.substringFromIndex(urlstring.startIndex.advancedBy(nonQueryString.characters.count))
-                let queryParameters: NSArray = queryString.componentsSeparatedByString("&")
-                let codeParameters: NSArray = queryParameters.filteredArrayUsingPredicate(NSPredicate(format: "SELF BEGINSWITH %@", "access_token="))
-                if let codeQuery: String = codeParameters.objectAtIndex(0) as? String {
-                    let code = codeQuery.stringByReplacingOccurrencesOfString("access_token=", withString: "")
-                    print("access_token = \(code)")
-                    if Keychain.save(code, forKey: "access_token") {
-                        
-                    }
-                }
-            }
-            return true
+        MMTokenManager.getTokenFromRedirectedURL(url) { (success) in
+            dispatch_async(dispatch_get_main_queue(), { 
+                NSNotificationCenter.defaultCenter().postNotificationName(MMConstants.notification_successfullyGotUserToken, object: nil, userInfo: ["success":NSNumber(bool: success)])
+            })
         }
         return false
     }

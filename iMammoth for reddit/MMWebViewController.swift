@@ -19,6 +19,7 @@ class MMWebViewController: UIViewController, UIWebViewDelegate {
     required init(request: NSURLRequest) {
         super.init(nibName: nil, bundle: nil)
         currentRequest = request
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.dismissCurrent), name: MMConstants.notification_receivedRedirectedURL, object: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,7 +62,7 @@ class MMWebViewController: UIViewController, UIWebViewDelegate {
     func dismissCurrent() {
         
         self.navigationController?.dismissViewControllerAnimated(true, completion: { 
-            
+
         })
     }
 

@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6750B8751D50EE4D00A16DBA /* AppOnlyToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750B8741D50EE4D00A16DBA /* AppOnlyToken.swift */; };
+		6750B8751D50EE4D00A16DBA /* MMClientToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750B8741D50EE4D00A16DBA /* MMClientToken.swift */; };
 		6750B8781D50FEB800A16DBA /* MMBaseSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750B8771D50FEB800A16DBA /* MMBaseSession.swift */; };
 		6750B87A1D51036700A16DBA /* MMWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750B8791D51036700A16DBA /* MMWebViewController.swift */; };
+		6750B8851D5267BC00A16DBA /* MMTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750B8841D5267BC00A16DBA /* MMTokenManager.swift */; };
+		6750B8881D52691400A16DBA /* MMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750B8871D52691400A16DBA /* MMConstants.swift */; };
 		6754B5741D4F236400F2069E /* SideNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6754B5731D4F236400F2069E /* SideNavigationController.swift */; };
 		6754B5761D4F58CA00F2069E /* MMTUserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6754B5751D4F58CA00F2069E /* MMTUserAPIManager.swift */; };
+		675549E61D526C12009DD711 /* MMUserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675549E51D526C12009DD711 /* MMUserToken.swift */; };
 		6768CE0F1CF1BF890046700A /* MMTClientAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768CE0E1CF1BF890046700A /* MMTClientAPIManager.swift */; };
 		6768CE111CF1C0180046700A /* MMTPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768CE101CF1C0180046700A /* MMTPathGenerator.swift */; };
+		67778B211D53A1DB003D2B97 /* MMFoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67778B201D53A1DB003D2B97 /* MMFoundationExtensions.swift */; };
 		67E093341CEB910200739046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E093331CEB910200739046 /* AppDelegate.swift */; };
 		67E093361CEB910200739046 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E093351CEB910200739046 /* ViewController.swift */; };
 		67E093391CEB910200739046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E093371CEB910200739046 /* Main.storyboard */; };
@@ -24,13 +28,17 @@
 
 /* Begin PBXFileReference section */
 		123E4BBED2E4AC2AC1904EA6 /* Pods-iMammoth for reddit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMammoth for reddit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMammoth for reddit/Pods-iMammoth for reddit.debug.xcconfig"; sourceTree = "<group>"; };
-		6750B8741D50EE4D00A16DBA /* AppOnlyToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOnlyToken.swift; sourceTree = "<group>"; };
+		6750B8741D50EE4D00A16DBA /* MMClientToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMClientToken.swift; sourceTree = "<group>"; };
 		6750B8771D50FEB800A16DBA /* MMBaseSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMBaseSession.swift; sourceTree = "<group>"; };
 		6750B8791D51036700A16DBA /* MMWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMWebViewController.swift; sourceTree = "<group>"; };
+		6750B8841D5267BC00A16DBA /* MMTokenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTokenManager.swift; sourceTree = "<group>"; };
+		6750B8871D52691400A16DBA /* MMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMConstants.swift; sourceTree = "<group>"; };
 		6754B5731D4F236400F2069E /* SideNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideNavigationController.swift; sourceTree = "<group>"; };
 		6754B5751D4F58CA00F2069E /* MMTUserAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTUserAPIManager.swift; sourceTree = "<group>"; };
+		675549E51D526C12009DD711 /* MMUserToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMUserToken.swift; sourceTree = "<group>"; };
 		6768CE0E1CF1BF890046700A /* MMTClientAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTClientAPIManager.swift; sourceTree = "<group>"; };
 		6768CE101CF1C0180046700A /* MMTPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTPathGenerator.swift; sourceTree = "<group>"; };
+		67778B201D53A1DB003D2B97 /* MMFoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMFoundationExtensions.swift; sourceTree = "<group>"; };
 		67E093301CEB910200739046 /* iMammoth for reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iMammoth for reddit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E093331CEB910200739046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67E093351CEB910200739046 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +73,8 @@
 		6750B8731D50ED6C00A16DBA /* Model Objects */ = {
 			isa = PBXGroup;
 			children = (
-				6750B8741D50EE4D00A16DBA /* AppOnlyToken.swift */,
+				6750B8741D50EE4D00A16DBA /* MMClientToken.swift */,
+				675549E51D526C12009DD711 /* MMUserToken.swift */,
 			);
 			name = "Model Objects";
 			path = Model;
@@ -79,6 +88,22 @@
 			path = "Network Manager";
 			sourceTree = "<group>";
 		};
+		6750B8831D52679100A16DBA /* Token Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6750B8841D5267BC00A16DBA /* MMTokenManager.swift */,
+			);
+			path = "Token Manager";
+			sourceTree = "<group>";
+		};
+		6750B8861D52690900A16DBA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				6750B8871D52691400A16DBA /* MMConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		6754B5721D4F234A00F2069E /* Navigation Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,21 +112,23 @@
 			path = "Navigation Controller";
 			sourceTree = "<group>";
 		};
-		6768CE0D1CF1BE580046700A /* API */ = {
+		6768CE0D1CF1BE580046700A /* Paths */ = {
 			isa = PBXGroup;
 			children = (
 				6768CE101CF1C0180046700A /* MMTPathGenerator.swift */,
 				6768CE0E1CF1BF890046700A /* MMTClientAPIManager.swift */,
 				6754B5751D4F58CA00F2069E /* MMTUserAPIManager.swift */,
 			);
+			name = Paths;
 			path = API;
 			sourceTree = "<group>";
 		};
-		6768CE121CF1CBFA0046700A /* Miscellaneous */ = {
+		67778B1F1D53A1C2003D2B97 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				67778B201D53A1DB003D2B97 /* MMFoundationExtensions.swift */,
 			);
-			path = Miscellaneous;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		67E093271CEB910200739046 = {
@@ -130,9 +157,11 @@
 				6750B8791D51036700A16DBA /* MMWebViewController.swift */,
 				6754B5721D4F234A00F2069E /* Navigation Controller */,
 				6750B8731D50ED6C00A16DBA /* Model Objects */,
+				67778B1F1D53A1C2003D2B97 /* Extensions */,
 				6750B8761D50FCFF00A16DBA /* Network Manager */,
-				6768CE0D1CF1BE580046700A /* API */,
-				6768CE121CF1CBFA0046700A /* Miscellaneous */,
+				6750B8831D52679100A16DBA /* Token Manager */,
+				6750B8861D52690900A16DBA /* Constants */,
+				6768CE0D1CF1BE580046700A /* Paths */,
 				67E093371CEB910200739046 /* Main.storyboard */,
 				67E0933A1CEB910200739046 /* Assets.xcassets */,
 				67E0933C1CEB910200739046 /* LaunchScreen.storyboard */,
@@ -278,9 +307,13 @@
 				6754B5761D4F58CA00F2069E /* MMTUserAPIManager.swift in Sources */,
 				6750B87A1D51036700A16DBA /* MMWebViewController.swift in Sources */,
 				6754B5741D4F236400F2069E /* SideNavigationController.swift in Sources */,
-				6750B8751D50EE4D00A16DBA /* AppOnlyToken.swift in Sources */,
+				6750B8751D50EE4D00A16DBA /* MMClientToken.swift in Sources */,
+				675549E61D526C12009DD711 /* MMUserToken.swift in Sources */,
 				6768CE111CF1C0180046700A /* MMTPathGenerator.swift in Sources */,
+				6750B8851D5267BC00A16DBA /* MMTokenManager.swift in Sources */,
 				67E093341CEB910200739046 /* AppDelegate.swift in Sources */,
+				67778B211D53A1DB003D2B97 /* MMFoundationExtensions.swift in Sources */,
+				6750B8881D52691400A16DBA /* MMConstants.swift in Sources */,
 				6750B8781D50FEB800A16DBA /* MMBaseSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

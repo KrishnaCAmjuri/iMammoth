@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class AppOnlyToken: Mappable {
+class MMClientToken: Mappable {
     
     var accessToken: String = ""
     
@@ -18,14 +18,12 @@ class AppOnlyToken: Mappable {
     var tokenType: String = ""
     
     required init?(_ map: Map) {
-        if map.JSONDictionary["SUCCESS"] == nil {
-            return nil
-        }
+        
     }
     
     func mapping(map: Map) {
-        accessToken <- map["SUCCESS.access_token"]
-        expirationInterval <- map["SUCCESS.expires_in"]
-        tokenType <- map["SUCCESS.token_type"]
+        accessToken <- map["access_token"]
+        expirationInterval <- map["expires_in"]
+        tokenType <- map["token_type"]
     }
 }

@@ -8,9 +8,13 @@
 
 import UIKit
 
-class MMBaseSession: NSObject, NSURLSessionDelegate, NSURLSessionDataDelegate {
+class MMBaseManager: NSObject, NSURLSessionDelegate, NSURLSessionTaskDelegate {
     
+    static var sharedManager: MMBaseManager = MMBaseManager()
     
-    
+    override init() {
+        super.init()
+        
+    }
     
 }

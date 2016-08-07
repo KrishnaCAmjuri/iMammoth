@@ -11,8 +11,6 @@ import Alamofire
 
 class ViewController: UIViewController, UIWebViewDelegate {
     
-    let authorizationUrlString = "https://www.reddit.com/api/v1/authorize.compact?client_id=FhboqVZdAcqDQA&response_type=code&state=fuckyou&redirect_uri=iMammoth-for-reddit://response&duration=permanent&scope=identity,edit,flair,history,modconfig,modflair,modlog,modposts,modwiki,mysubreddits,privatemessages,read,report,save,submit,subscribe,vote,wikiedit,wikiread"
-    
     let implicitGrantFlowAuthString = "https://www.reddit.com/api/v1/authorize.compact?client_id=FhboqVZdAcqDQA&response_type=token&state=fuckyou&redirect_uri=iMammoth-for-reddit://response&scope=identity edit flair history modconfig modflair modlog modposts modwiki mysubreddits privatemessages read report save submit subscribe vote wikiedit wikiread"
     
     func replaceSpaceByEncoding(string : String) -> String {
@@ -22,73 +20,56 @@ class ViewController: UIViewController, UIWebViewDelegate {
         return ""
     }
     
-    func loginPressed(sender: AnyObject) {
+    @IBAction func getUserToken(sender: AnyObject) {
         
-        if let url: NSURL = NSURL(string: replaceSpaceByEncoding(implicitGrantFlowAuthString)) {
-            let request: NSURLRequest = NSURLRequest(URL: url)
-            let wkVC: MMWebViewController = MMWebViewController(request: request)
-            let nav: UINavigationController = UINavigationController(rootViewController: wkVC)
-            self.presentViewController(nav, animated: true, completion: nil)
-//            webView.delegate = self
-//            webView.loadRequest(request)
-//            webView.hidden = false
-//            login.hidden = true
-        }
-//
-//        MMTClientAPIManager.generateClientOnlyAccessToken()
-        
-    }
-    
-    func webViewDidStartLoad(webView: UIWebView) {
-        let activityindicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
-        activityindicator.tag = 22
-        activityindicator.center = self.view.center
-        activityindicator.hidesWhenStopped = true
-        activityindicator.transform = CGAffineTransformMakeScale(2, 2)
-        self.view.addSubview(activityindicator)
-        
-        activityindicator.startAnimating()
-    }
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
-        if let activityIndicator: UIActivityIndicatorView = self.view.viewWithTag(22) as? UIActivityIndicatorView {
-            activityIndicator.stopAnimating()
-            activityIndicator.removeFromSuperview()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(presentResultForNotification(_:)), name: MMConstants.notification_successfullyGotUserToken, object: nil)
+        weak var weakself = self
+        MMTokenManager.launchWebViewForUserOnlyAccessToken(weakself) { (success) in
+            
         }
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
+    @IBAction func getRefreshToken(sender: AnyObject) {
+        
+        MMTokenManager.refreshTheAccessToken { (success) in
+            dispatch_async(dispatch_get_main_queue(), {
+                self.successAlert(success)
+            })
+        }
+    }
+    
+    @IBAction func revokeCurrentToken(sender: AnyObject) {
+        
+        MMTokenManager.revokeToken { (success) in
+            dispatch_async(dispatch_get_main_queue(), {
+                self.successAlert(success)
+            })
+        }
+    }
+    
+    @IBAction func getAppOnlyToken(sender: AnyObject) {
+    
+        MMTokenManager.generateClientOnlyAccessToken { (success) in
+            dispatch_async(dispatch_get_main_queue(), { 
+                self.successAlert(success)
+            })
+        }
+    }
+    
+    @IBAction func getListOfSections(sender: AnyObject) {
+        
         
     }
-    
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        return true
-    }
-    
-    let webView: UIWebView = UIWebView()
-    let login: UIButton = UIButton(type: UIButtonType.Custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        webView.backgroundColor = UIColor.whiteColor()
-        webView.hidden = true
-        self.view.addSubview(webView)
-        
-        login.frame = CGRectMake(0, 0, 120, 40)
-        login.center = self.view.center
-        login.setTitle("Login", forState: UIControlState.Normal)
-        login.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        login.backgroundColor = UIColor.lightGrayColor()
-        login.addTarget(self, action: #selector(self.loginPressed(_:)), forControlEvents: UIControlEvents.TouchDown)
-        self.view.addSubview(login)
-        
+                
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        webView.frame = self.view.bounds
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -96,5 +77,23 @@ class ViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func presentResultForNotification(sender: NSNotification) {
+        
+        var success: Bool = false
+        if let userInfo: [String : NSNumber] = sender.userInfo as? [String : NSNumber] {
+            success = (userInfo["success"]?.boolValue)!
+        }
+        self.successAlert(success)
+    }
+    
+    func successAlert(success: Bool) {
+        
+        let alert: UIAlertController = UIAlertController(title: success ? "Successful" : "Failed", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        let action: UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel) { (action) in
+            
+        }
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 }
 
