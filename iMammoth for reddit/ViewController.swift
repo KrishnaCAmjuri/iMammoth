@@ -56,9 +56,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
         }
     }
     
-    @IBAction func getListOfSections(sender: AnyObject) {
+    @IBAction func getUserData(sender: AnyObject) {
         
-        
+        MMBaseSession.getUserData()
     }
     
     override func viewDidLoad() {

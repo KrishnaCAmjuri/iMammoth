@@ -13,9 +13,7 @@
 		6750B8851D5267BC00A16DBA /* MMTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750B8841D5267BC00A16DBA /* MMTokenManager.swift */; };
 		6750B8881D52691400A16DBA /* MMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6750B8871D52691400A16DBA /* MMConstants.swift */; };
 		6754B5741D4F236400F2069E /* SideNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6754B5731D4F236400F2069E /* SideNavigationController.swift */; };
-		6754B5761D4F58CA00F2069E /* MMTUserAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6754B5751D4F58CA00F2069E /* MMTUserAPIManager.swift */; };
 		675549E61D526C12009DD711 /* MMUserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675549E51D526C12009DD711 /* MMUserToken.swift */; };
-		6768CE0F1CF1BF890046700A /* MMTClientAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768CE0E1CF1BF890046700A /* MMTClientAPIManager.swift */; };
 		6768CE111CF1C0180046700A /* MMTPathGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768CE101CF1C0180046700A /* MMTPathGenerator.swift */; };
 		67778B211D53A1DB003D2B97 /* MMFoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67778B201D53A1DB003D2B97 /* MMFoundationExtensions.swift */; };
 		67E093341CEB910200739046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E093331CEB910200739046 /* AppDelegate.swift */; };
@@ -34,9 +32,7 @@
 		6750B8841D5267BC00A16DBA /* MMTokenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTokenManager.swift; sourceTree = "<group>"; };
 		6750B8871D52691400A16DBA /* MMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMConstants.swift; sourceTree = "<group>"; };
 		6754B5731D4F236400F2069E /* SideNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideNavigationController.swift; sourceTree = "<group>"; };
-		6754B5751D4F58CA00F2069E /* MMTUserAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTUserAPIManager.swift; sourceTree = "<group>"; };
 		675549E51D526C12009DD711 /* MMUserToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMUserToken.swift; sourceTree = "<group>"; };
-		6768CE0E1CF1BF890046700A /* MMTClientAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTClientAPIManager.swift; sourceTree = "<group>"; };
 		6768CE101CF1C0180046700A /* MMTPathGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMTPathGenerator.swift; sourceTree = "<group>"; };
 		67778B201D53A1DB003D2B97 /* MMFoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMFoundationExtensions.swift; sourceTree = "<group>"; };
 		67E093301CEB910200739046 /* iMammoth for reddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iMammoth for reddit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,8 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				6768CE101CF1C0180046700A /* MMTPathGenerator.swift */,
-				6768CE0E1CF1BF890046700A /* MMTClientAPIManager.swift */,
-				6754B5751D4F58CA00F2069E /* MMTUserAPIManager.swift */,
 			);
 			name = Paths;
 			path = API;
@@ -302,9 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6768CE0F1CF1BF890046700A /* MMTClientAPIManager.swift in Sources */,
 				67E093361CEB910200739046 /* ViewController.swift in Sources */,
-				6754B5761D4F58CA00F2069E /* MMTUserAPIManager.swift in Sources */,
 				6750B87A1D51036700A16DBA /* MMWebViewController.swift in Sources */,
 				6754B5741D4F236400F2069E /* SideNavigationController.swift in Sources */,
 				6750B8751D50EE4D00A16DBA /* MMClientToken.swift in Sources */,

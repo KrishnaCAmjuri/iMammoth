@@ -56,12 +56,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAa-Iz-hKU">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Navigate To "/>
+                                <state key="normal" title="User Data"/>
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="157" y="415" width="86" height="30"/>
+                                    <rect key="frame" x="166" y="415" width="69" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="getListOfSections:" destination="BYZ-38-t0r" eventType="touchDown" id="FLr-YA-hsW"/>
+                                    <action selector="getUserData:" destination="BYZ-38-t0r" eventType="touchDown" id="66a-kC-W8w"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -101,4 +101,14 @@ extension NSMutableURLRequest {
         self.HTTPMethod = "POST"
         self.HTTPBody = parameters.getEncodedPostData()
     }
+    
+    func configureWithAuthenticationHeader() {
+        
+        MMTokenManager.loadToken(TokenType.User) { (token, success) in
+            if success {
+                self.addValue("bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+        }
+    }
+    
 }

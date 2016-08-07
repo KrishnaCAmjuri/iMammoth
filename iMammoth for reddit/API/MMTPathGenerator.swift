@@ -10,6 +10,20 @@ import UIKit
 
 var MM_CURRENT_STATE = "" // will get changed
 
+enum MMProfile: String {
+    case blocked    = "/blocked"
+    case friends    = "/friends"
+    case karma      = "/karma"
+    case prefs      = "/prefs"
+    case trophies   = "/trophies"
+    case None       = ""
+}
+
+enum MMProfilePref: String {
+    case friends    = "/friends"
+    case blocked    = "/blocked"
+}
+
 class MMTPathGenerator: NSObject {
     
     static let BASE_TOKEN_URL = "https://www.reddit.com/api/v1"
@@ -57,9 +71,15 @@ class MMTPathGenerator: NSObject {
     
     //MARK: - ACCOUNT PATHS
     
-    class func generateAccountAccessPath() -> String {
+    class func generateAccountAccessPath(forFilter filter: MMProfile) -> String {
         
-        var path = ""
+        let path = BASE_SERVER_URL + "/api/v1/me" + filter.rawValue
+        return path
+    }
+    
+    class func generateAccountPrefAccessPath(forFilter filter: MMProfilePref) -> String {
+        
+        let path = MMTPathGenerator.generateAccountAccessPath(forFilter: .prefs) + filter.rawValue
         return path
     }
 }
